@@ -1,0 +1,842 @@
+/*CORE STYLES*/
+		
+		body{
+			margin:0;
+			padding:0;
+			text-align: center;
+			overflow-x:hidden;
+		}
+		.dark{
+			background-color: #262626;
+		}
+		/*FOR TOP ALL*/
+		header{
+			border-bottom: 1px solid black;
+			position: fixed;
+			top:0;
+			width:100%;
+			height:50px;
+			margin-bottom:10px;
+			z-index:200;
+			background-color: #fff;
+		}
+
+		/*FOR THREE LINES*/
+		.menu-toggle{
+			position: absolute;
+			top:0;
+			left:0;
+			width: 50px;
+			height: 50px;
+			/*background-color: #262626;*/
+			cursor: pointer;
+			z-index:1;
+			transition:0.5s;
+			/*border:2px solid green;*/
+		}
+
+		.menu-toggle span{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			display: block;
+			height:5px;
+			width:60%;
+			background-color: red;
+			transition:0.5s;
+		}
+
+		.menu-toggle span:nth-child(1){
+			top:30%;
+		}
+		.menu-toggle span:nth-child(3){
+			top:70%;
+		}
+
+		.menu-toggle.active span:nth-child(1){
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%) rotate(45deg);
+		}
+		.menu-toggle.active span:nth-child(2){
+			opacity: 0;
+		}
+		.menu-toggle.active span:nth-child(3){
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%) rotate(-45deg);
+		}
+
+/*FOR MENU-RIGHT*/
+		nav{
+			position:absolute;
+			top:0;
+			left:-100%;
+			height:40px;
+			transition:0.5s;
+		}
+		nav.active{
+			left:40px;
+		}
+
+		nav ul{
+			padding:0;
+			margin:0;
+			background-color:#262626;
+			
+		}
+		nav ul li{
+			list-style: none;
+			display:inline-block;
+		}
+		nav ul li a{
+			color:#fff;
+			text-decoration: none;
+			font-size: 24px;
+			padding:0px 20px;
+			height:50px;
+			line-height:50px;
+			display:block;
+			transition:0.5s;
+			letter-spacing:1px;
+		}
+		nav ul li a:hover{
+			text-decoration: underline;
+		}
+
+		nav .toggle-bar{
+			width:100%;
+			text-align:left;
+			padding:10px 20px;
+			font-size: 30px;
+			color:red;
+			display: none;
+			box-sizing:border-box;
+			cursor:pointer;
+			display:none;
+		}
+
+
+
+
+
+
+
+
+		/*	FOR SEARCH BUTTON */
+
+		.search{
+			position: absolute;
+			top:0;
+			right:0;
+			background-color:#262626;
+			width: 50px;
+			z-index:200;
+		}
+
+		.search .icon{
+			position:absolute;
+			top: 0;
+			right: 0;
+			color: red;
+			height: 50px;
+			line-height: 50px;
+			width: 50px;
+			font-size: 30px;
+			text-align: center;
+			cursor:pointer;
+			transition:0.5s;
+			/*border:2px solid green;*/
+		}
+
+		.search .icon:before{
+			content: '\f002';
+			font-family: fontAwesome;
+		}
+		.search.active .icon:before{
+			content: '\f00d';
+			font-family: fontAwesome;
+		}
+
+		.search.active{
+			height: 100vh;
+			width: 100vw;
+		}
+
+		.form{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			display:none;
+		}
+		.form input{
+			background:transparent;
+			color: #fff;
+			font-size: 40px;
+			padding:10px 0;
+			border:none;
+			border-bottom: 4px solid #fff;
+			outline:none;
+		}
+
+		.search.active .form{
+			display: block;
+			z-index: 100;
+		}
+
+		.form input::placeholder{
+			color:#fff;
+		}
+
+		
+		/*FOR LOGO*/
+
+		.logo{
+			position: absolute;
+			top:0;
+			left:50%;
+			font-size: 25px;
+			padding:5px;
+			margin-top: 5px;
+			color: red;
+			font-weight:bold;
+			cursor:pointer;
+			/*border:2px solid green;*/
+		}
+
+
+
+
+
+
+		
+
+
+
+
+ p{
+	margin:5px;
+	padding:5px;
+	text-align:center;
+	letter-spacing:2px;
+	font-size:18px;
+}
+
+/*FOR READ MORE AND SHOW BUTTONS*/
+.buttons{
+	background-color:#31353d;
+	color: white;
+	display:inline-block;
+	margin:10px auto;
+	font-size: 20px;
+	padding:5px;
+	cursor: pointer;
+	outline: none;
+	border:1px solid black;
+}
+
+.buttons:hover{
+	background-color: #eaeaea;
+	color: #333;
+}
+
+
+/*FOR HEADER SHOWCASE*/
+
+#showcase{
+	width:100%;
+	height:auto;
+}
+
+
+/*#showcase #bg-image{
+	position: absolute;
+	background-image:url(../images/runway.jpg);
+	background-size:cover;
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 550px;
+	z-index: -1;
+	opacity:0.6;
+}*/
+img{
+	display: block;
+	width: 100%;
+	height:660px;
+	z-index:-2;
+}
+#big-image img{
+	width: 100%;
+	height:660px;
+	position:absolute;
+	z-index:-2;
+}
+
+
+.contain-wrap{
+	position:absolute;
+	top:100px;
+	padding:10px;
+	background-color: rgba(0,0,0,.5);
+	opacity: 0.7;
+	z-index:100;
+}
+.contain-wrap h1{
+	color: #fff;
+	font-weight: bold;
+	font-size:30px;
+}
+
+.contain-wrap p{
+	text-align:center;
+	color: #fff;
+	letter-spacing:1;
+	font-size:20px;
+}
+
+
+
+#leftRight{
+	width: 100%;
+	height:50px;
+	background-color:rgba(0,0,0,0.5);
+	position:absolute;
+	bottom:10px;
+	z-index:100;
+	color:#fff;
+}
+
+#leftRight .fa-arrow-left{
+	position: absolute;
+	bottom:0px;
+	left:10px;
+	cursor: pointer;
+	z-index:100;
+	font-size: 40px;
+}
+#leftRight .fa-arrow-right{
+	position: absolute;
+	bottom:0px;
+	right:10px;
+	cursor: pointer;
+	z-index: 1;
+	font-size:40px;
+	
+}
+
+
+
+
+/*FOR CONTAINER*/
+.container{
+	width:100%;
+	margin:0px auto;
+	padding-bottom:10px;
+}
+
+/*FOR HEADINGS*/
+.wrapper{
+	padding-top:50px;
+	width:100%;
+	margin:10px 0px;
+}
+.wrapper h2{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing:2;
+	font-weight:bold;
+	font-size:30px;
+}
+.wrapper span{
+	text-transform: lowercase;
+	font-weight: normal;
+	font-size:25px;
+	margin:10px 0px;
+
+}
+
+.wrapper .box{
+	width:22%;
+	float:left;
+	box-sizing:border-box;
+	transform:translateX(20%);
+	margin:0px 5px;
+	padding:0px;
+}
+
+.box .box_image .fa{
+	color:#0fffb7;
+	font-size:50px;
+	font-weight:normal;
+}
+
+.box .box_title p{
+	letter-spacing:2px;
+	font-weight:bold;
+	font-size:24px;
+}
+
+.box .box_body p{
+	font-size:20px;
+	text-align:left;
+	padding:10px;
+}
+
+
+
+/*FOR TEAM SECTION*/
+.row{
+	width: 100%;
+	position: relative;
+}
+
+.row h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 40px;
+	color: #fff;
+}
+
+.row p {
+	margin:20px 0px;
+	color: #fff;
+	padding-left:15px;
+	border-left: 5px solid #f00;
+	text-align: justify;
+	letter-spacing:1px;
+	font-size:18px;
+}
+
+
+
+.Team_wrapper{
+	width:80%;
+	display:flex;
+	margin:5px auto;
+}
+.imgBox{
+	height:333px;
+	width:510px;
+	position:relative;
+	overflow:hidden;	
+}
+
+.imgBox img{
+	cursor: pointer;
+	transition:transform 1s;
+	margin:0px;
+	padding:0px;
+	height:100%;
+	width:100%;
+
+}
+
+.imgBox:hover img{
+	transform:rotate(15deg) scale(1.5,1.5);
+}
+
+#shadow{
+	height:333px;
+	width:500px;
+	background-color: rgba(0,0,0,0.4);
+	transition:transform 2s;
+	position: relative;
+}
+
+.imgBox:hover #shadow{
+	transform:translateY(-333px) rotate(360deg);
+}
+#text{
+	position:absolute;
+	top:15px;
+	left:0px;
+	letter-spacing:2px;
+}
+#text p{
+	font-size:30px;
+	color:#fff;
+	height:30px;
+	line-height:30px;
+	padding:5px;
+	font-size:bold;
+	text-align:left;
+}
+
+#text span{
+	font-weight:normal;
+	opacity:0.5;
+	font-size:20px;
+	text-align:left;
+}
+
+#text div{
+	text-align:left;
+	color:#fff;
+	font-size:18px;
+	display:inline-block;
+	position:relative;
+	top:30px;
+}
+
+
+
+
+#shadow ul{
+	margin:0;
+	padding:0;
+	display: flex;
+	position: relative;
+	top:220px;
+}
+
+#shadow ul li{
+	list-style: none;
+	width:15%;
+}
+
+#shadow ul li a{
+	font-size:25px;
+	color: #fff;
+	display: block;
+}
+
+/*FOR FORM*/
+.Form_container{
+	width:60%;
+	overflow:hidden;
+	float:right;
+
+}
+
+.signin{
+	background-color:#00f;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	color:black;
+	text-align:center;
+	font-size:25px;
+	font-weight:bold;
+	letter-spacing:2px;
+	cursor:pointer;
+}
+
+.fold{
+	position:relative;
+	width:100%;
+	background-color:rgba(17,24,34,0.8);
+	transition:transform 0.5s;
+	padding:20px 10px;
+	transform:perspective(800px) rotateX(-90deg);
+	transform-origin:top;
+}
+
+.fold.active{
+	transform:perspective(800px) rotateX(0deg);
+}
+
+.fold form input[ type="text"],
+.fold form input[ type="password"]{
+	width:95%;
+	margin-bottom:20px;
+	height:30px;
+	padding:10px 20px;
+	box-sizing: border-box;
+	border:none;
+	outline:none;
+	color:#fff;
+	background-color: transparent;
+	border:1px solid #fff;
+	border-radius:5px;
+	font-size:25px;
+}
+.fold form input[type="button"]{
+	display: block;
+	background-color:#333;
+	border-radius:5px;
+	border:none;
+	outline:none;
+	height:35px;
+	line-height:35px;
+	padding:0px 40px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size:20px;
+	color:#fff;
+	margin:auto;
+	cursor:pointer;
+}
+
+.fold form input[type="button"]:hover{
+	background:#00f;
+}
+
+::placeholder{
+	color:#fff;
+}
+
+.fold form a{
+	text-align:right;
+	color:#fff;
+	margin:20px 10px;
+	font-weight:bold;
+	font-size:20px;
+	display: block;
+}
+.contact_container{
+	width:80%;
+	height:400px;
+	box-sizing:border-box;
+	box-shadow:10px 10px 20px #262626;
+	margin:50px auto;
+	padding:0px 20px;
+	transform:translateY(0%);
+}
+.contact_container h2{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing:2;
+	font-weight:bold;
+	font-size:30px;
+}
+.contact_container span{
+	text-transform: lowercase;
+	font-weight: normal;
+	font-size:25px;
+	margin:10px 0px;
+
+}
+
+.Form_image{
+	width:30%;
+	float:left;
+}
+
+.Form_image .fa{
+	font-size:20px;
+	width:100%;
+	text-align:left;
+	letter-spacing:5px;
+}
+
+
+
+/*FOR SKILL LEVEL*/
+.center{
+	width:40%;
+	padding:10px;
+	background-color: #333;
+	float:right;
+}
+
+.skill_about h1{
+	text-transform: uppercase;
+	text-align: center;
+	margin:0;
+	padding:0;
+	letter-spacing:2px;
+	color:#fff;
+
+}
+
+.skillBox{
+	width:100%;
+	margin:20px 0px;
+}
+
+.skillBox p{
+	margin:0;
+	padding:10px 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.skillBox p:nth-child(2){
+	float: right;
+	position: relative;
+	top:-35px;
+}
+
+.skill{
+	padding:5px;
+	border-radius:5px;
+	background-color:#262626;
+	border:1px solid #0fffb7;
+}
+.skill_level{
+	background-color: #0fffb7;
+	width:100%;
+	height:10px;
+}
+
+.skill_container{
+	width:80%;
+	margin:20px auto;
+	
+}
+.skill_about{
+	width:50%;
+	float:left;
+	margin-bottom:10px;
+}
+
+.skill_about p{
+	font-size:20px;
+	text-align:justify;
+	margin:0px;
+	padding:0px;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+/*FOR FOOTER*/
+#main-footer{
+	background-color:#000;
+	color: #fff;
+	padding:5px;
+}
+
+#main-footer a{
+	color:#fff;
+}
+
+#main-footer p{
+	font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@media(max-width:850px){
+
+		.skill_about p{
+			font-size:18px;
+			text-align:justify;
+			margin:0px;
+			padding:0px;
+			color:#fff;
+		}
+
+		.contain-wrap p{
+			margin:0px;
+			padding:0px;
+		}
+		.wrapper{
+			padding-top:10px;
+		}
+		.wrapper .box{
+			width:100%;
+			float:none;
+			transform:translateX(0%);
+			margin:0px 5px;
+		}
+		.imgBox:hover #shadow{
+			transform:translateY(0px) rotate(0deg);
+		}
+
+
+		/*FOR FORM*/
+		.Form_container{
+			width:100%;
+			float:none;
+
+		}
+		.Form_image{
+			width:100%;
+			float:none;
+		}
+
+		.contact_container{
+			height:450px;
+		}
+
+
+		
+	}
+
+	@media(max-width: 750px){
+		nav{
+			left:20px;
+			
+		}
+		nav ul{
+			display:none;
+		}
+		nav ul li{
+			display:inline-block;
+			text-align:center;
+			width:100%;
+			z-index:1;
+		}
+
+		nav ul li a{
+			font-size:20px;
+			padding:0px 40px;
+			height:50px;
+			line-height:50px;
+			display:block;
+			transition:0.5s;
+			letter-spacing:3px;
+		}
+
+		nav .fa{
+			color:red;
+			padding:0px 5px;
+		}
+
+		header .toggle-bar{
+			display:block;
+		}
+
+		.menu-toggle span{
+			display:none;
+		}
+
+		.wrapper .box{
+			float:none;
+		}
+
+	}
+
+	@media(max-width:670px){
+			.Team_wrapper{
+				width:70%;
+				display:inline-block;
+			}
+
+			/*FOR SKILL LEVEL*/
+			.center{
+				width:100%;
+				float:none;
+			}
+
+			.skill_about{
+				width:100%;
+				float:none;
+			}
+		}
+
+
+	
